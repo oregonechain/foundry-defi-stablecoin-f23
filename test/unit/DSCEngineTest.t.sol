@@ -39,7 +39,7 @@ contract DSCEngineTest is Test {
     // depositCollateral tests
     function testRevertIfCollateralZero() public {
         vm.startPrank(USER);
-        ERC20Mock(weth).approve(address(dsce), AMOUNT_COLLATERAL);
+        //ERC20Mock(weth).approve(address(dsce), AMOUNT_COLLATERAL); // I think we don't get the point where approval matters in this test
 
         vm.expectRevert(DSCEngine.DSCEngine__NeedMoreThanZero.selector);
         dsce.depositCollateral(weth, 0);
