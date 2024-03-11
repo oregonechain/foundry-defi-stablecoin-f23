@@ -6,6 +6,10 @@ remappings = [
     '@chainlink/contracts/=lib/chainlink-brownie-contracts/contracts/',
     '@openzeppelin/contracts=lib/openzeppelin-contracts/contracts'
 ]
+[invariant]
+runs = 2 #WSL Can't handle this properly fast :(
+depth = 128
+fail_on_revert = true
 # ffi = true
 # fs_permissions = [
 #     { access = "read", path = "./img/" },
